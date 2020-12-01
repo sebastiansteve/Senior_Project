@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head>
+<body>
+    <%- include ('../includes/navBar.ejs') %>
+    <div class="container">
+        <div>
+            <form action="/add-art" method="POST">
+                <label for="newTitle">Title</label><br>
+                <input type="text" name="newTitle" id="newtitle"><br>
+                <label for="newDescription">Description</label><br>
+                <input type="text" name="newDescription" id="newDecription"><br>
+                <label for="image">Image</label><br>
+                <input type="file" name="image" id="image">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<div class=""></div>
+<header class="">
+    <button id="">Menu</button>
+    <nav class="">
+        <ul class="">
+            <li class="">
+                <a class="<%= path === '/' ? 'active' : '' %>" href="/">Home</a>
+            </li>
+            <!---<% if (isAuthenticated) { %>--->
+                <li class="">
+                    <a class="<%= path === '/add' ? 'active' : '' %>" href="/add">Add item
+                    </a>
+                </li>
+                <li class="">
+                    <a class="<%= path === '/mystuff' ? 'active' : '' %>" href="/myart">My stuff
+                    </a>
+                </li>
+            <!---<% } %>--->
+        </ul>
+        <ul class="">
+            <!---<% if (!isAuthenticated) { %>--->
+                <li class="">
+                    <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a>
+                </li>
+                <li class="">
+                    <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+                </li>
+            <!---<% } else { %>--->
+                <li class="">
+                    <form action="/logout" method="post">
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            <!---<% } %>--->
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,7 @@
+.gallery {
+    display: grid;
+}
+
+.galleryItem {
+    display: inline-grid;
+}

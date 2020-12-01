@@ -1,0 +1,16 @@
+.login-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+  }
+
+.error-message {
+  margin: auto;
+  width: 90%;
+  border: 1px solid;
+  border-radius: 4px;
+  text-align: center;
+  border-color: black;
+  background: rgb(236, 88, 88);
+}
