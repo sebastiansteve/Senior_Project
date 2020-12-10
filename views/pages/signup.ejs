@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 <body>
     <%- include('../includes/navBar.ejs') %>
@@ -13,20 +14,25 @@
         <div class="error-message"><%= errorMessage %></div>
     <% } %>
     <div class="">
-        <form class="" action="/signup" method="POST">
+        <form class="login-form" action="/signup" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="">
-                <label for="email">E-Mail</label>
-                <input type="email" name="email" id="email">
+                <label for="email" class="label">E-Mail</label>
+                <input type="email" name="email" id="email" class="input">
             </div>
             <div class="">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <label for="username" class="label">Username</label>
+                <input type="username" name="username" id="username" class="input">
             </div>
             <div class="">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" name="confirmPassword" id="confirmPassword">
+                <label for="password" class="label">Password</label>
+                <input type="password" name="password" id="password" class="input">
             </div>
-            <button class="" type="submit">Login</button>
+            <div class="">
+                <label for="confirmPassword" class="label">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" class="input"><br><br>
+            </div>
+            <button class="" type="submit">Signup</button>
         </form>
     </div>
     

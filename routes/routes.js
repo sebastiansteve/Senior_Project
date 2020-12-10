@@ -1,6 +1,7 @@
 const path = require('path');
-
 const express = require('express');
+
+const isAuth = require('../middleware/is-auth');
 
 const router = express.Router();
 
@@ -10,13 +11,16 @@ const authController = require('../controllers/authControl');
 
 //gallery
 router.get('/', galleryController.getIndex);
-router.get('/art-details', galleryController.getArtDetails);
+router.get('/stuff-details', galleryController.getStuffDetails); 
 
 //admin
-router.get('/add-art', adminController.getAddArt);
-router.post('/add-art', adminController.postAddArt);
-router.get('/edit-art', adminController.getEditArt);
-router.post('/edit-art', adminController.postEditArt);
+router.get('/my-stuff', isAuth, adminController.getStuff); 
+router.get('/view-stuff', adminController.getViewStuff); 
+router.get('/add-stuff', isAuth, adminController.getAddStuff); 
+router.post('/add-stuff', isAuth, adminController.postAddStuff);
+router.get('/edit-stuff', isAuth, adminController.getEditStuff);
+router.post('/edit-stuff', isAuth, adminController.postEditStuff);
+router.get('/delete-stuff', isAuth, adminController.getDeleteStuff);
 
 //auth
 router.get('/signup', authController.getSignup);
