@@ -11,17 +11,17 @@
         <% if (art !== null) { %>
         <article>
             <header>
-                <h1><%= art.name %></h1>
+                <h1><%= stuff.name %></h1>
             </header>
             <div>
-                <img src="<%= art.imageFile %>" alt="<%= art.name %>" style="width:500px;">
+                <img src="<%= stuff.imageFile %>" alt="<%= stuff.name %>" style="width:500px;">
             </div><br>
             <div>
                 <p><%= art.description %></p>
             </div>
         </article>
         <% } else { %>
-        <h1>No artwork found!</h1>
+        <h1>No items found!</h1>
         <% } %>
     </div>
 </body>
